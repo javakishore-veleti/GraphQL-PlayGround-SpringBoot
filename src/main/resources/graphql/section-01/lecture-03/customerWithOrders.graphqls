@@ -1,0 +1,22 @@
+type Query {
+
+	customerOrders(customerId:Int!): [Customer]
+	customerOrderById(customerId: Int!, orderId:Int!): [Customer]
+}
+
+type Customer {
+
+	id: String,
+	name: String,
+	age: Int,
+	city: String,
+	orders: [CustomerOrder]
+
+}
+
+type CustomerOrder {
+
+	id: Int,
+	orderDate: String
+
+}
